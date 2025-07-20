@@ -19,8 +19,8 @@ import Rate from '../Other/Rate'
 interface ProductProps {
     data: ProductType
     type: string
-    style: string
-     className?: string;    
+    className?: string;
+    style?: React.CSSProperties;    
 }
 const Product: React.FC<ProductProps> = ({ data, type, style }) => {
     const [activeColor, setActiveColor] = useState<string>('')
