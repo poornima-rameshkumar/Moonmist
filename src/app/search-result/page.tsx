@@ -1,3 +1,4 @@
+src/app/search-result/page.tsx
 'use client'
 import React, { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
@@ -124,9 +125,12 @@ const SearchResult = () => {
                                 item.id === 'no-data' ? (
                                     <div key={item.id} className="no-data-product">No products match the selected criteria.</div>
                                 ) : (
-                                    <Product key={item.id} data={item} type='grid' />
+                                    <Product key={item.id} data={item} type='grid' style={{}} />
                                 )
-                            ))}
+                            ))}git add .
+git commit -m "fix: added missing style prop to Product component"
+git push origin main
+v
                         </div>
 
                         {pageCount > 1 && (
