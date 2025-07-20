@@ -20,8 +20,8 @@ interface ProductProps {
     data: ProductType
     type: string
     style: string
+     className?: string;    
 }
-
 const Product: React.FC<ProductProps> = ({ data, type, style }) => {
     const [activeColor, setActiveColor] = useState<string>('')
     const [activeSize, setActiveSize] = useState<string>('')
