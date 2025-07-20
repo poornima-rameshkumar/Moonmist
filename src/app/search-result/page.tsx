@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import TopNavOne from '@/components/Header/TopNav/TopNavOne';
@@ -92,7 +91,7 @@ const SearchResult = () => {
                 <div className="container">
                     <div className="heading flex flex-col items-center">
                         <div className="heading4 text-center">
-                            Found {filteredData.length} results for "{query}"
+                            Found {filteredData.length} results for &quot;{query}&quot;
                         </div>
                         <div className="input-block lg:w-1/2 sm:w-3/5 w-full md:h-[52px] h-[44px] sm:mt-8 mt-5">
                             <div className='w-full h-full relative'>
