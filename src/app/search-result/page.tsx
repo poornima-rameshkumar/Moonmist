@@ -1,5 +1,7 @@
-src/app/search-result/page.tsx
-'use client'
+react';
+import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import TopNavOne from '@/components/Header/To
 import React, { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'

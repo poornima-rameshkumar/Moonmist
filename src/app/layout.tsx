@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Instrument_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
+
 import '@/styles/styles.scss'
 import GlobalProvider from './GlobalProvider'
 import ModalCart from '@/components/Modal/ModalCart'
@@ -10,12 +11,15 @@ import ModalCompare from '@/components/Modal/ModalCompare'
 import CountdownTimeType from '@/type/CountdownType'
 import { countdownTime } from '@/store/countdownTime'
 
-const serverTimeLeft: CountdownTimeType = countdownTime();
+// ✅ Load Google Font
+const inter = Inter({
+  subsets: ['latin'],
+})
 
-const instrument = Instrument_Sans({ subsets: ['latin'] })
+const serverTimeLeft: CountdownTimeType = countdownTime()
 
 export const metadata: Metadata = {
-  title: 'Anvogue',
+  title: 'Moonmist',
   description: 'Multipurpose eCommerce Template',
 }
 
@@ -27,7 +31,8 @@ export default function RootLayout({
   return (
     <GlobalProvider>
       <html lang="en">
-        <body className={instrument.className}>
+        {/* ✅ Use correct font class */}
+        <body className={inter.className}>
           {children}
           <ModalCart serverTimeLeft={serverTimeLeft} />
           <ModalWishlist />
